@@ -10,6 +10,7 @@ const meta: Meta<typeof Card> = {
 };
 
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
 export const DefaultCard: Story = {
@@ -21,8 +22,15 @@ export const DefaultCard: Story = {
 export const CardWithImage: Story = {
   args: {
     children: (
-       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-        <img src="https://picsum.photos/200/150"  alt="Example" />
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '0.5rem',
+        }}
+      >
+        <img src="https://picsum.photos/200/150" alt="Example" />
         <p>This is the card with the image!</p>
       </div>
     ),
